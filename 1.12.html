@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document 1.12</title>
+</head>
+
+<body style="background-color: coral;">
+    <script>
+        //Write JavaScript to demonstrate conditional statements and looping (for, while,do-while). 
+        //This script checks if a number is even or odd and then prints all even numbers up to that number.
+        let number = Number(prompt("Enter a positive integer:"));
+
+        if (number % 2 === 0) {
+            document.write("The number is even.");
+        } else {
+            document.write("The number is odd.");
+        }
+        document.write("<br>by while loop,even no. till: " + number + ":<br>");
+        let i = 2;
+        while (i <= number) {
+            document.write(i + "<br>");
+            i += 2;
+        }
+        // Alternatively, using a for loop
+        document.write("by for loop,even no. till: " + number + "<br>");
+        for (let j = 2; j <= number; j += 2) {
+            document.write(j + "<br>");
+        }
+        // Using do-while loop
+        document.write("by do-while loop,even no. till: " + number + "<br>");
+        let k = 2;
+        do {
+            document.write(k + "<br>");
+            k += 2;
+        } while (k <= number);
+    </script>
+</body>
+
+</html>

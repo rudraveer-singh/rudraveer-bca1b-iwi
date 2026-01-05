@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // create and invoke a user defined function in js using var, let and const for scope demonstration
+        //global scope variables
+        var x = 1;
+        let y = 2;
+        const z = 3;
+        //local/function scope variables
+        function demonstrateScope() {
+            var a = 10;
+            let b = 20;
+            const c = 30;
+
+            document.write(a + "<br>"); // Accessible within the function
+            document.write(b + "<br>"); // Accessible within the function
+            document.write(c + "<br>"); // Accessible within the function
+            document.write(x + "<br>"); // Accessible within the function as well as this is a global variable
+        }
+        // creting a block to demonstrate block scope
+        if (true) {
+            var d = 15;
+            let e = 16;
+            const f = 17;
+            document.write(d + "<br>"); // Accessible within the block
+            document.write(e + "<br>"); // Accessible within the block
+            document.write(f + "<br>"); // Accessible within the block
+            document.write(x + "<br>"); // Accessible within the block as well as this is a global variable
+        }
+
+        demonstrateScope();
+
+        // Trying to access block scope variables outside the block
+        document.write(d + "<br>"); // Accessible due to var's function scope
+        document.write(e + "<br>"); // Error: let is block-scoped
+        document.write(f + "<br>"); // ERROR: const is block-scoped
+        // for global variables 
+        document.write(x + "<br>"); // Accessible everywhere
+        document.write(y + "<br>"); // Accessible everywhere
+        document.write(z + "<br>"); // Accessible everywhere
+
+    </script>
+
+</body>
+
+</html>

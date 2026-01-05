@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Portfolio as the end-sem project</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0  ">
+    <meta name="author" content="Rudraveer Singh">
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            background: radial-gradient(circle, #27b6c9, #be31bb);
+            ;
+            color: #333;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 15px 20px;
+            background: #7decdc;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .home-icon {
+            font-size: 22px;
+        }
+
+        .brand-name {
+            font-size: 22px;
+            font-weight: bold;
+            color: #260b93;
+        }
+
+        nav {
+            margin-left: auto;
+        }
+
+        nav a {
+            margin: 0 12px;
+            text-decoration: none;
+            font-weight: 500;
+            color: #444;
+            transition: .2s;
+        }
+
+        nav a:hover {
+            color: #235aba;
+            text-decoration: underline;
+            font-weight: 600;
+        }
+
+        section {
+            padding: 40px 25px;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        h2 {
+            color: #1b39b1;
+            margin-bottom: 12px;
+        }
+
+        .about-box {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .profile-pic {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            border: 3px solid #2a1489;
+            object-fit: cover;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 18px;
+        }
+
+        .skill-card {
+            background: white;
+            padding: 14px;
+            border-radius: 12px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+            text-align: center;
+        }
+
+        .skill-card img {
+            width: 40px;
+            height: 40px;
+        }
+
+        .project-box {
+            background: white;
+            padding: 14px;
+            border-radius: 12px;
+            margin-bottom: 12px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+        }
+
+        .project-inner {
+            margin-top: 10px;
+            background: #f3f1ff;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        .rec-box {
+            background: #ffffff;
+            padding: 12px;
+            border-left: 4px solid #2c129d;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .rec-form textarea {
+            width: 100%;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #bbb;
+            resize: none;
+        }
+
+        .btn {
+            margin-top: 10px;
+            padding: 8px 14px;
+            border-radius: 8px;
+            background: #2c1691;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: #271577;
+        }
+
+        input,
+        select {
+            padding: 8px;
+            border-radius: 6px;
+            border: 1px solid #aaa;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="home-icon">🏠</div>
+        <div class="brand-name">Rudraveer Singh</div>
+
+        <nav>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#recommendations">Recommendations</a>
+        </nav>
+    </header>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <div class="about-box">
+            <img class="profile-pic" src="C:\Users\rudra\Downloads\WhatsApp Image 2025-12-30 at 3.40.59 PM.jpeg"
+                alt="Profile">
+            <p>
+                Hi, I am <b>Rudraveer Singh</b>, a web development enthusiast skilled in HTML, CSS, and JavaScript.
+                I enjoy building interactive web applications and improving user experience through clean design.
+                At this moment, I have sub-par knowledge of web development but I am working hard to improve it.
+            </p>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg">
+                <p>HTML5</p>
+            </div>
+            <div class="skill-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg">
+                <p>CSS3</p>
+            </div>
+            <div class="skill-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg">
+                <p>JavaScript</p>
+            </div>
+            <div class="skill-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg">
+                <p>Git</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+
+        <!-- PROJECT 1 -->
+        <div class="project-box">
+            <b>Student Result Calculator</b>
+            <p>Calculates total marks, percentage and grade based on subject scores.</p>
+
+            <div class="project-inner">
+                <input id="m1" type="number" placeholder="Subject 1">
+                <input id="m2" type="number" placeholder="Subject 2">
+                <input id="m3" type="number" placeholder="Subject 3">
+                <button class="btn" onclick="calcResult()">Calculate</button>
+                <p id="resultOut"></p>
+            </div>
+        </div>
+
+        <!-- PROJECT 2 -->
+        <div class="project-box">
+            <b>Daily Expense Tracker</b>
+            <p>Add expenses and see running total instantly.</p>
+
+            <div class="project-inner">
+                <input id="expenseText" placeholder="Expense name">
+                <input id="expenseAmt" type="number" placeholder="Amount">
+                <button class="btn" onclick="addExpense()">Add</button>
+                <ul id="expenseList"></ul>
+                <b>Total: ₹<span id="totalAmt">0</span></b>
+            </div>
+        </div>
+
+        <!-- PROJECT 3 — SIMPLE CALCULATOR -->
+        <div class="project-box">
+            <b>Simple Calculator</b>
+            <p>Performs basic arithmetic operations using JavaScript.</p>
+
+            <div class="project-inner">
+                <input id="num1" type="number" placeholder="Enter number 1">
+                <input id="num2" type="number" placeholder="Enter number 2">
+
+                <div style="margin-top:8px;">
+                    <button class="btn" onclick="calculate('+')">+</button>
+                    <button class="btn" onclick="calculate('-')">-</button>
+                    <button class="btn" onclick="calculate('*')">*</button>
+                    <button class="btn" onclick="calculate('/')">/</button>
+                </div>
+
+                <p id="calcOutput"></p>
+            </div>
+        </div>
+    </section>
+
+    <section id="recommendations">
+        <h2>Recommendations</h2>
+
+        <div id="recList">
+            <div class="rec-box">I am a fast learner and adapt well to project requirements.</div>
+            <div class="rec-box">I have a strong foundation in JavaScript and UI design.</div>
+            <div class="rec-box">I could show dedication and problem-solving skills.</div>
+        </div>
+
+        <div class="rec-form">
+            <h3>Add a Recommendation</h3>
+            <textarea id="recInput" rows="3" placeholder="Write your recommendation here..."></textarea>
+            <button class="btn" onclick="addRecommendation()">Submit</button>
+        </div>
+    </section>
+
+    <script>
+        /* PROJECT 1 — RESULT CALCULATOR */
+        function calcResult() {
+            let a = +m1.value, b = +m2.value, c = +m3.value;
+            let total = a + b + c, percent = (total / 300) * 100;
+            let grade = percent >= 75 ? "A" : percent >= 60 ? "B" : percent >= 40 ? "C" : "Fail";
+            resultOut.innerText = `Total: ${total} | Percentage: ${percent.toFixed(2)}% | Grade: ${grade}`;
+        }
+
+        /* PROJECT 2 — EXPENSE TRACKER */
+        let total = 0;
+        function addExpense() {
+            const name = expenseText.value.trim();
+            const amt = +expenseAmt.value;
+            if (!name || !amt) { alert("Enter name and amount"); return; }
+            const li = document.createElement("li");
+            li.innerText = `${name} — ₹${amt}`;
+            expenseList.appendChild(li);
+            total += amt;
+            totalAmt.innerText = total;
+            expenseText.value = ""; expenseAmt.value = "";
+        }
+
+        /* PROJECT 3 — SIMPLE CALCULATOR */
+        function calculate(op) {
+            const n1 = +num1.value, n2 = +num2.value;
+            if (isNaN(n1) || isNaN(n2)) { alert("Enter both numbers"); return; }
+
+            let res;
+            if (op === '+') res = n1 + n2;
+            else if (op === '-') res = n1 - n2;
+            else if (op === '*') res = n1 * n2;
+            else if (op === '/') {
+                res = n2 === 0 ? "Cannot divide by zero" : n1 / n2;
+            }
+            calcOutput.innerText = `Result: ${res}`;
+        }
+
+        /* RECOMMENDATIONS */
+        function addRecommendation() {
+            const text = recInput.value.trim();
+            if (text === "") { alert("Please enter a recommendation."); return; }
+            const box = document.createElement("div");
+            box.className = "rec-box";
+            box.innerText = text;
+            recList.appendChild(box);
+            recInput.value = "";
+            alert("Thank you! Your recommendation has been added.");
+        }
+    </script>
+
+</body>
+
+</html>

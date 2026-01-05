@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    //Demonstrate DOM manipulation using getElementById(), querySelector(), and innerHTML.
+    <h2 id="header">demo of DOM Manipulation</h2>
+    <p class="description">This is a paragraph.</p>
+
+    <script>
+        // Using getElementById()
+        const header = document.getElementById("header");
+        header.innerHTML = "DOM Manipulation Example";
+
+        // Using querySelector()
+        const description = document.querySelector(".description");
+        description.innerHTML = "This paragraph has been updated using querySelector().";
+
+    </script>
+</body>
+
+</html>

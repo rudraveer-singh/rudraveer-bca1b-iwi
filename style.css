@@ -1,0 +1,6 @@
+.box {
+    background-color: aquamarine;
+    border: 2px solid rgb(6, 116, 101);
+    padding: 20px;
+    margin: 20px;
+}

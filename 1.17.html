@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button style="border-radius: 20px;background-color: chartreuse;" id="myButton">Click me!</button>
+    <script>
+        //Add interactivity using event listeners (addEventListener, removeEventListener) for mouse/keyboard events
+        document.write("<h1>Event Listener to Change  font family</h1><br>");
+        // Selecting the button element
+        const button = document.getElementById('myButton');
+
+        // Adding an event listener to the button
+        button.addEventListener('click', function () {
+            alert('color changed!');
+        });
+        //adding the function
+        function changeBg() {
+            document.body.style.backgroundColor = 'coral';
+        }
+        // Adding another event listener to change background color
+        button.addEventListener('click', changeBg);
+        //adding a keyboard event as well
+        document.addEventListener('keydown', function (event) {
+            if (event.key === ' ') { // Change font family when 'space' key is pressed
+                document.body.style.fontFamily = 'lucida calligraphy';
+            }
+        });
+
+
+    </script>
+</body>
+
+</html>
