@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="background-color: rgb(8, 72, 51);">
+    <!--add a click event to a button that changes the text of a paragraph -->
+    <button style="border-radius: 10px; background-color: blueviolet;" onclick="changeText()">Click me</button>
+    <p style="color: rgb(106, 194, 17);" id="demo">This is a paragraph.</p>
+    <script>
+        function changeText() {
+            document.getElementById("demo").innerHTML = "The text has been changed!";
+        }
+    </script>
+</body>
+
+</html>

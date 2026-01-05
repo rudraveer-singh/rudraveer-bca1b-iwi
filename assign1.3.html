@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--Build an HTML form that asks the user for their Name, Email, Gender (radio buttons), 
+        Favorite Subject (dropdown), and Comments (textarea). Add a Submit button.-->
+    <form action="#" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email"><br><br>
+
+        <label>Gender:</label>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label><br><br>
+
+        <label for="subject">Favorite Subject:</label>
+        <select id="subject" name="subject">
+            <option value="">Select Subject</option>
+            <option value="">maths</option>
+            <option value="">PFC</option>
+            <option value="">IWI</option>
+            <option value="">DL</option>
+            <option value="">NALS</option>
+        </select><br><br>
+
+        <label for="comments">Comments:</label><br>
+        <textarea id="comments" name="comments"></textarea><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+
+</html>
